@@ -1,0 +1,33 @@
+
+  <div class="col-md-6">
+        <h2>Listado de Camaras</h2>
+        <ul class="list-group">
+          <li (click)="verCamara(n)" class="list-group-item" *ngFor="let n of camara">{{n.nmatriz}}.{{n.direccion}}. {{n.tipo}}. {{n.fase}}.{{n.estado}}</li>
+         </ul>
+          <a class="btn btn-primary btn-block" (click)="addCamara()">Registrar nueva Camara</a>
+ </div>
+ <div class="col-md-6" *ngIf="show_form">
+  <h2>Nueva Camara</h2>
+     <input class="form-control" type="text" placeholder=" Numero de Matriz" [(ngModel)]="cam.nmatriz"/>
+     <input class="form-control" type="text" placeholder="Direeccion de Ubicacion" [(ngModel)]="cam.direccion"/>
+     <input class="form-control" type="text" placeholder="Tipo de Camara" [(ngModel)]="cam.tipo"/>
+     <input class="form-control" type="text" placeholder="Fase de Implementacion" [(ngModel)]="cam.fase"/>
+     <input class="form-control" type="text" placeholder="Estado" [(ngModel)]="cam.estado"/>
+     <input class="form-control" type="text" placeholder="Observacion" [(ngModel)]="cam.obsevacion"/>
+     
+  <div class="row">
+  <div class="col-md-4">
+  <a class="btn btn-danger btn-block" *ngIf="editing" (click)="delete()">Eliminar</a>
+  </div>
+
+  <div class="col-md-4">
+  <a class="btn btn-primary btn-block" (click)="crearCamara()">Guardar Registro</a>
+  </div>
+
+  <div class="col-md-4">    
+  <a class="btn btn-primary btn-block" (click)="cancel()">Cancelar</a>
+  </div>
+ </div>
+
+</div>
+       
