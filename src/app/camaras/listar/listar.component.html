@@ -1,3 +1,28 @@
-<p>
-  listar works!
-</p>
+<div class="container">
+    <h2>Listado de Camaras </h2>
+    <table class="table">
+        <thead>
+            <tr>
+               <th>
+                   Direccion
+               </th>
+                <th>Estado</th>
+                <th>Fase</th>
+                <th>Numero de matriz</th>
+                <th>Observaciòn</th>
+                <th>Tipo de Camara</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of proyectService.camarasList">
+                <td>{{item.direccion}}</td>
+                <td> {{item.estado}}</td>
+                <td> {{item.fase}}</td>
+                <td> {{item.nmatriz}}</td>
+                <td> {{item.observacion}}</td>
+                <td> {{item.tipocamara}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

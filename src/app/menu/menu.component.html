@@ -1,4 +1,30 @@
-<div>
-    <button routerLink="camaras/index">Camaras</button>
-  <br>  <button routerLink="usuarios/index">agregar</button>
-</div>
+<br>
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+     Camaras <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    
+<li><a href="camaras/agregar">Agregar Camara </a></li>
+<li><a href="camaras/index">Listar Camara</a></li>
+    </ul>
+  </li>
+
+   
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Usuarios <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    
+<li><a href="agregarUsuario">Agregar Usuario</a></li>
+<li><a href="#">Listar Usuarios </a></li>
+    </ul>
+  </li>
+
+
+
+</ul>
+
