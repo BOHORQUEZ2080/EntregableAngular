@@ -1,0 +1,40 @@
+<div class="container">
+
+    <form #usuariosForm="ngForm">
+        <div [hidden]="usuariosForm.submitted">
+          
+            <div class="form-group">
+                <label for="estado">Password</label>
+                <input id="estado" class="form-control" name="estado" [(ngModel)]="usuarios.contrasenia">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Usuario</label>
+                <input id="name" name="name" class="form-control" required minlength="4" [(ngModel)]="usuarios.usuario" #name="ngModel">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                    <div *ngIf="name.errors.required">
+                        Usuario es requerido.
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                        Usuario debe tener almenos 4 caracteres de longitud.
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <a class="btn btn-primary btn-block" (click)="crearUsuario()" (click)="usuariosForm.resetForm({})">Guardar Usuario</a>
+                </div>
+                <div class="col-sm-6">
+                    <a class="btn btn-primary btn-block" (click)="usuariosForm.resetForm({})">Limpiar</a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>

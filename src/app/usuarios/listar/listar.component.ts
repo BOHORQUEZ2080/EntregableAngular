@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProyectServiceProvider } from '../../proyect-service/proyect-service';
 
 @Component({
   selector: 'usuarios-listar',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(  private proyectService:ProyectServiceProvider) { }
 
   ngOnInit() {
+    this.proyectService.gatDataUsu();
   }
 
 }

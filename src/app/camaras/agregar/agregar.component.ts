@@ -24,6 +24,7 @@
     ngOnInit() {    this.camaras = new Camaras();
     }
     crearCamara() {
+      alert('Registro Guardado Exitosamente');
       this.proyectService.guardarCamara(this.camaras).subscribe(
         response => {
           if (response.code === 200) {

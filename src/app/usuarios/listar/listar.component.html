@@ -1,3 +1,21 @@
-<p>
+<div class="container">
+    <h2>Listado de Usuarios  </h2>
+    <table class="table">
+        <thead>
+            <tr>
+   
+                <th>Contraseña</th>
+                <th>Usuarios</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuarios of proyectService.usuariosList">
+                <td>{{usuarios.contrasenia}}</td>
+                <td> {{usuarios.usuario}}</td>
+               
 
-</p>
+            </tr>
+        </tbody>
+    </table>
+</div>
