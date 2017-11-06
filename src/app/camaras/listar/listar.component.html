@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of proyectService.camarasList">
-                <td>{{item.direccion}}</td>
-                <td> {{item.estado}}</td>
-                <td> {{item.fase}}</td>
-                <td> {{item.nmatriz}}</td>
-                <td> {{item.observacion}}</td>
-                <td> {{item.tipocamara}}</td>
+            <tr *ngFor="let camaras of proyectService.camarasList">
+                <td>{{camaras.direccion}}</td>
+                <td> {{camaras.estado}}</td>
+                <td> {{camaras.fase}}</td>
+                <td> {{camaras.nmatriz}}</td>
+                <td> {{camaras.observacion}}</td>
+                <td> {{camaras.tipocamara}}</td>
 
             </tr>
         </tbody>

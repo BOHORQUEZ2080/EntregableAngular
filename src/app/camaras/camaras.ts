@@ -1,8 +1,9 @@
 export class Camaras {
-
-
-    constructor(
-        public nmatriz: string, public direccion: string, public tipoCamara: string,
-        public fase: string, public estado: string, public observacion: string) { }
+    direccion: string;
+    estado: string;
+    fase: string;
+    nmatriz: string;
+    observacion: string;
+    tipocamara: string;
 
 }

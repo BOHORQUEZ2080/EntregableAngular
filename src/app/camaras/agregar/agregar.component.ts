@@ -11,19 +11,17 @@
   })
   export class AgregarComponent implements OnInit {
     camaras: Camaras;
-    emailFormControl = new FormControl('', [
-      Validators.required]);
   
-    public camaraAdd: Camaras;
+  
     constructor(
       private proyectService: ProyectServiceProvider,
       private route: ActivatedRoute,
       private router: Router
     ) {
   
-      this.camaras = new Camaras('1','1','1','1','1','1');
+  
     }
-    ngOnInit() {
+    ngOnInit() {    this.camaras = new Camaras();
     }
     crearCamara() {
       this.proyectService.guardarCamara(this.camaras).subscribe(

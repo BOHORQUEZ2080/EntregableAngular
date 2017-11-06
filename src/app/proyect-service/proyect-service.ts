@@ -9,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class ProyectServiceProvider {
 
   camarasList: Array<Camaras>;
-
+  headersPost: Headers;
+  options: RequestOptions;
+  
   constructor(
     private http: HttpClient,private _http: Http
   ) { }
@@ -21,7 +23,6 @@ export class ProyectServiceProvider {
       });
   }
 
-
   guardarCamara(nuevaCamara: Camaras) {
     const json = JSON.stringify(nuevaCamara);
     const params = json;
@@ -31,6 +32,4 @@ export class ProyectServiceProvider {
       params, { headers: headers }).map(res => res.json());
 
   }
-
-
 }

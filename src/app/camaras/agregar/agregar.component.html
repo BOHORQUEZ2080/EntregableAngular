@@ -1,12 +1,15 @@
 <div class=" form-group row" class="col-sm-12">
     
       <h2>Crear Camara</h2>
-      <input class="form-control" type="text" placeholder=" Numero de Matriz" [(ngModel)]="cam.nmatriz" />
-      <input class="form-control" type="text" placeholder="Direeccion de Ubicacion" [(ngModel)]="cam.direccion" />
-      <input class="form-control" type="text" placeholder="Tipo de Camara" [(ngModel)]="cam.tipo" />
-      <input class="form-control" type="text" placeholder="Fase de Implementacion" [(ngModel)]="cam.fase" />
-      <input class="form-control" type="text" placeholder="Estado" [(ngModel)]="cam.estado" />
-      <input class="form-control" type="text" placeholder="Observacion" [(ngModel)]="cam.obsevacion" />
+      
+      <input class="form-control" type="text" placeholder="Direeccion de Ubicacion" [(ngModel)]="camaras.direccion" />
+      
+      <input class="form-control" type="text" placeholder="Estado" [(ngModel)]="camaras.estado" />
+      
+      <input class="form-control" type="text" placeholder="Fase de Implementacion" [(ngModel)]="camaras.fase" />
+      <input class="form-control" type="text" placeholder=" Numero de Matriz" [(ngModel)]="camaras.nmatriz" />
+      <input class="form-control" type="text" placeholder="Observacion" [(ngModel)]="camaras.observacion" />   
+      <input class="form-control" type="text" placeholder="Tipo de Camara" [(ngModel)]="camaras.tipocamara" />
     
       <div class="row">
         <div class="col-sm-6">
