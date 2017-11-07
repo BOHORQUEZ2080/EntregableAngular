@@ -28,7 +28,7 @@
       this.proyectService.guardarCamara(this.camaras).subscribe(
         response => {
           if (response.code === 200) {
-            alert('Registro Guardado Exitosamente');
+            alert('Camara Registrada Correctamente');
   
           } else {
             console.log(response);

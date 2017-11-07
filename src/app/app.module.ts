@@ -18,18 +18,22 @@ import { ProyectServiceProvider } from './proyect-service/proyect-service';
 
 import {BrowserAnimationsModule} from
 '@angular/platform-browser/animations';
+import { InicioComponent } from './inicio/inicio.component';
+
+
 const appRoutes: Routes = [
   { path: 'camaras/index', component: IndexComponent },
   { path: 'usuarios/index', component: IndexComponent1 },
   { path: 'camaras/agregar', component: AgregarComponent },
   { path: 'usuarios/agregar', component: Agregarusu },
+  { path: 'camaras/inicio', component: InicioComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent, 
-    CurrentOptionComponent,
+    CurrentOptionComponent, InicioComponent,
        
    
   ],
